@@ -31,6 +31,10 @@
     --gray10:#616161;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--gray40);
     font-family: 'Roboto', sans-serif;
