@@ -25,30 +25,54 @@
 
 :root {
     font-size: 18px;
-    --gray40:#212121; 
-    --gray30:#212429;
-    --gray20:#424242; 
-    --gray10:#616161;
+    --white40:#A5A3A5;
+    --white20:#3A3539;
+    --white10:#FFFFFF;
 }
 
 body {
-    color: var(--gray40);
-    font-family: 'Roboto', sans-serif;
-    /* font-family: charter; */
+    color: var(--white10);
+    font-family:'nunito', sans-serif;
+    background: #251F24;
+    margin: 0;
 }
+
+.header{
+    /* position: sticky;
+    inset-block-start: -45px; */
+}
+
+.header-content {
+    /* position:relative;
+    inset-block-start: 65px; */
+    padding-inline:20px ;
+}
+
 
 header { 
     font-size: 14px;
-    color: var(--gray10)
+    color: var(--white10);
+    margin-block-start: 20px;
+    /* inset-inline-start: -208px; */
+    /* inline-size: 188px; */
 }
 
 header a {
-    color: var(--gray10);
+    color: var(--white40);
     text-decoration: none;
 }
 
+header li {
+    color: var(--white40);
+    margin-block-end: 16px;
+}
 header a:hover {
-    color: var(--gray40);
+    color: var(--white10);
+}
+
+hr {
+border-color :#616161;
+margin-block: 40px;
 }
 
 nav details summary {
@@ -56,44 +80,170 @@ nav details summary {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 40px;
+    font-weight: bold;
+    margin-block-start: 20px;
+    margin-block-end: 16px;
 }
 
 h2 {
     font-size: 32px;
+    font-weight: bold;
+    margin-block: 40px;
 }
 
 h3 {
-    color: var(--gray20);
+    color: var(--white10);
     font-size: 24px;
+    font-weight: 600;
+    margin-block: 16px;
 }
 p {
-    color: var(--gray20);
+    color: var(--white40);
 }
 pre {
-    background: #FEC62E;
+    background: var(--white20);
+    padding:40px;
+    overflow: auto;
+    border-radius: 8px;
+    border: 10px solid #5551ff;
+    box-shadow: -10px 10px 0 0 #ABAAF6;
+    margin-block-end: 30px;
+}
+
+blockquote { 
+    margin-block-start: 80px;
+    margin-block-end: 63px;
+    background-color: var(--white20);
+    border-radius:8px;
+    line-height: 32px;
+    font-size: 24px;
+    padding-inline: 24px;
+    padding-block: 24px;
+}
+
+blockquote p {
+    color: var(--white10);
 }
 
 .hero {
-    background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url(../images/patron.png);
-    height: 350px;
+    background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+    /* background-image: linear-radient(to top, rgba(255, 255, 255, .3), transparent), url(../images/patron.png); */
+    block-size:  50px;
+}
+
+.section-content img{
+    margin-block-start: 40px;
+    display: block;
+    max-inline-size: 100%;
 }
 
 .section-content {
     counter-reset: titlelist;
 }
 
-.section-content h3::after {
+/* .section-content h3::after {
     content: '';
     width: 32px;
     height: 4px;
-    background: var(--gray20);
+    background: var(--white10);
     display: inline-block;
-}
+} */
 .section-content h3::before {
-    content: counter(titlelist) '.' ;
+    content: counter(titlelist, decimal) '. ' ;
 
 }
 .section-content h3 {
     counter-increment: titlelist;
+}
+
+.wrapper {
+    /* border: 1px solid blue; */
+    max-inline-size: 902px;
+    margin: auto;
+}
+    
+.main-content {
+    padding-inline: 16px;
+}
+
+.slider-container{
+    /* border: 1px solid purple; */
+    /* block-size: 100px; */
+    display: block;
+    overflow: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.video {
+    margin: 0;
+    /* border: 1px solid blue; */
+    display: inline-block;
+    inline-size: 100%;
+    block-size: auto;
+    aspect-ratio: 16/9;
+}
+
+.slider-bullet-list{
+    text-align: center;
+    margin-block-start: 10px;
+}
+
+.slider-bullet{
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.form input{
+    width: 100%;
+    border: 1px solid var(--white10);
+    background: var(--white20);
+    border-radius: 8px;
+    padding-inline:16px;
+    padding-block: 12px;
+    color: var(--white10);
+    box-sizing: border-box;
+    font-size: 16px;
+    display: block;
+    margin-block-end:24px;
+}
+
+.form input[type="submit"] {
+    background: #157EFB;    
+    border: none;
+}
+
+.form input::-webkit-input-placeholder {
+color: var(--white40);
+}
+
+@media screen and (min-width:1366px) {
+    .hero {
+    block-size:  350px;
+    }
+    .header { 
+        position: sticky;
+        inset-block-start: -45px;
+    }  
+    .header-content {
+        position:relative;
+        inset-block-start: 65px;
+        padding-inline:0px ;
+    }
+    header { 
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: -208px;
+        inline-size: 188px;
+    }
+
+    h1 {
+        font: 60px;
+        margin-block-start: 64px;
+    }
 }
