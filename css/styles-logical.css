@@ -232,7 +232,7 @@ color: var(--white40);
     }  
     .header-content {
         position:relative;
-        inset-block-start: 65px;
+        inset-block-start: 55px;
         padding-inline:0px ;
     }
     header { 
