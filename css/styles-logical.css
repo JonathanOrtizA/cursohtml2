@@ -28,6 +28,7 @@
     --white40:#A5A3A5;
     --white20:#3A3539;
     --white10:#FFFFFF;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -35,11 +36,6 @@ body {
     font-family:'nunito', sans-serif;
     background: #251F24;
     margin: 0;
-}
-
-.header{
-    /* position: sticky;
-    inset-block-start: -45px; */
 }
 
 .header-content {
@@ -77,6 +73,7 @@ margin-block: 40px;
 
 nav details summary {
     font-weight: bold;
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -167,12 +164,10 @@ blockquote p {
     padding-inline: 16px;
 }
 
-.slider-container{
-    /* border: 1px solid purple; */
-    /* block-size: 100px; */
+.slider-container {
     display: block;
     overflow: auto;
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
     white-space: nowrap;
     font-size: 0;
 }
